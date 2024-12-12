@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Prospect to Client Hub</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+       
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #004080;
+        }
+        p, ul {
+            margin: 10px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #004080;
+            color: #fff;
+        }
+
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        /* General Navbar Styles */
+        /* Footer Text */
+footer p {
+    margin: 5px 0;
+}
+/* General Navbar Styles */
+.navbar {
+  background-color: #9a9c9daa;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 40px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  flex: 1; /* Logo aligned to the start */
+  width: 50px;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  flex: 2; /* Centered navigation */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.btn-contact {
+  background-color: #fff;
+  color: #007BFF;
+  padding: 10px 20px;
+  margin-left: 100px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 150px; /* Reduced width for the button */
+}
+
+.btn-contact:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+.menu-toggle{
+  display: none;
+}
+
+/* Responsive Design for Tablet and Phone */
+@media (max-width: 1024px) {
+  .nav-menu {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu icon */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .menu-toggle .close-icon {
+    display: none; /* Hidden initially */
+  }
+
+  .nav-menu {
+    display: none; /* Hidden on smaller devices */
+    flex-direction: column;
+    background-color: #9a9c9daa;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .btn-contact {
+    margin-top: 20px;
+    width: 60%; /* Adjust width for mobile devices */
+    text-align: center;
+  }
+
+  .menu-toggle .menu-icon.active {
+    display: none; /* Hide menu icon */
+  }
+
+  .menu-toggle .close-icon.active {
+    display: inline-block; /* Show close icon */
+  }
+  .btn-contact{
+    width: 200px;
+    margin-right: 50px;
+  }
+  .nav-container{
+    width: 90%;
+  }
+}
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 10px;
+            }
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+            main {
+                margin: 5px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            p, ul {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="navbar-brand">
+        <a href="#"><img src="img/pch9.jpg" alt="Logo" class="logo"></a>
+        
+      </div>
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="ptc.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="#testimonials/ptc.html">Testimonials</a></li>
+        </ul>
+        <a href="#contact/ptc.html" class="btn-contact">Contact Us</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle">
+        <span class="menu-icon">☰</span>
+        <span class="close-icon">✖</span>
+      </button>
+    </div>
+  </header>
+
+<main>
+    <h2>Welcome to Prospect to Client Hub</h2>
+    <img src="img/WhatsApp Image 2024-12-10 at 14.49.40.jpeg" alt="Welcome to Prospect to Client Hub">
+    <p>Where innovative strategies meet unparalleled expertise to drive business growth.</p>
+
+    <h2>Our Story</h2>
+    <img src="" alt="Our Story">
+    <p>Prospect to Client Hub was founded to bridge the gap between businesses and their clients by providing strategic solutions tailored to meet unique needs. With a deep understanding of client acquisition and retention, we aim to transform prospects into long-term, loyal customers.</p>
+
+    <p>At the heart of our operations is <strong>David</strong>, a result-driven professional with over 15 years of experience across diverse industries including client relationship management, pension administration, insurance, data analysis, training, marketing, and integrated agriculture.</p>
+    <img src="img/WhatsApp Image 2024-12-10 at 14.49.41 (1).jpeg" alt="David - Founder of Prospect to Client Hub">
+
+    <h2>Our Expertise</h2>
+    <img src="images/expertise.jpg" alt="Our Expertise">
+    <ul>
+        <li><strong>Client Relationship Management:</strong> Developing and nurturing client relationships to ensure sustainable business growth.</li>
+        <li><strong>Strategic Marketing:</strong> Crafting data-driven marketing strategies that convert prospects into clients.</li>
+        <li><strong>Training & Development:</strong> Empowering teams with skills to enhance productivity and customer satisfaction.</li>
+        <li><strong>Integrated Agriculture:</strong> Providing innovative solutions in sustainable agriculture.</li>
+    </ul>
+
+    <h2>Certifications and Achievements</h2>
+    <img src="images/certifications.jpg" alt="Certifications and Achievements">
+    <ul>
+        <li>Certified Customer Service Professional – Rockhurst University Continuing Education Center Inc. (USA)</li>
+        <li>Certified in Customer Relationship Management, Social Media Marketing, Online Reputation Management, and Online Marketing – Shaw Academy (Ireland)</li>
+        <li>Certified in Integrated Agriculture – Dominican Centre For Human Resources Development</li>
+        <li>Graduate of Mass Communication</li>
+        <li>Alumni, ALX Academy</li>
+    </ul>
+
+    <h2>Our Mission</h2>
+    <img src="images/mission.jpg" alt="Our Mission">
+    <p>To empower businesses with the tools and strategies needed to turn potential clients into loyal customers.</p>
+
+    <h2>Our Vision</h2>
+    <img src="images/vision.jpg" alt="Our Vision">
+    <p>To be a leader in client conversion and relationship management, setting the gold standard for customer-centric business solutions.</p>
+
+    <p>At Prospect to Client Hub, we are dedicated to helping you achieve measurable results and sustainable growth. Let’s work together to transform your prospects into lifelong clients.</p>
+</main>
+
+<footer>
+    <p>&copy; 2024 Prospect to Client Hub. All Rights Reserved.</p>
+</footer>
+<script>document.getElementById("menuToggle").addEventListener("click", function () {
+  const navMenu = document.getElementById("navMenu");
+  const menuIcon = document.querySelector(".menu-icon");
+  const closeIcon = document.querySelector(".close-icon");
+
+  navMenu.classList.toggle("active");
+  menuIcon.classList.toggle("active");
+  closeIcon.classList.toggle("active");
+});</script>
+</body>
+</html>

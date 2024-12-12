@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .service-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0073e6;
+    }
+
+    .service {
+      background: #fff;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .icon-placeholder img {
+      width: 50px;
+      height: 50px;
+      border: 2px  #005bb5;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      color: #005bb5;
+    }
+
+    .service h2 {
+      color: #005bb5;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      margin: 0;
+    }
+    /* Footer Styles */
+footer {
+    background-color: #007BFF;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-link {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Footer Text */
+footer p {
+    margin: 5px 0;
+}
+/* General Navbar Styles */
+.navbar {
+  background-color: #9a9c9daa;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  flex: 1; /* Logo aligned to the start */
+  width: 50px;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  flex: 2; /* Centered navigation */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.btn-contact {
+  background-color: #fff;
+  color: #007BFF;
+  padding: 10px 20px;
+  margin-left: 100px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 150px; /* Reduced width for the button */
+}
+
+.btn-contact:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+.menu-toggle{
+  display: none;
+}
+
+/* Responsive Design for Tablet and Phone */
+@media (max-width: 1024px) {
+  .nav-menu {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu icon */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .menu-toggle .close-icon {
+    display: none; /* Hidden initially */
+  }
+
+  .nav-menu {
+    display: none; /* Hidden on smaller devices */
+    flex-direction: column;
+    background-color: #9a9c9daa;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .btn-contact {
+    margin-top: 20px;
+    width: 60%; /* Adjust width for mobile devices */
+    text-align: center;
+  }
+
+  .menu-toggle .menu-icon.active {
+    display: none; /* Hide menu icon */
+  }
+
+  .menu-toggle .close-icon.active {
+    display: inline-block; /* Show close icon */
+  }
+  .btn-contact{
+    width: 200px;
+    margin-right: 50px;
+  }
+  .nav-container{
+    width: 90%;
+  }
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .social-icons {
+        margin-bottom: 10px;
+    }
+
+    .social-link {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+}
+
+    @media (max-width: 768px) {
+      .service {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .icon-placeholder {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .service {
+        padding: 15px;
+      }
+
+      .service h2 {
+        font-size: 1.2rem;
+      }
+
+      .service p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+
+<header class="navbar">
+  <div class="nav-container">
+    <div class="navbar-brand">
+      <a href="#"><img src="img/pch9.jpg" alt="Logo" class="logo"></a>
+      
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-links">
+        <li><a href="ptc.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="#testimonials/ptc.html">Testimonials</a></li>
+      </ul>
+      <a href="#contact/ptc.html" class="btn-contact">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">
+      <span class="menu-icon">☰</span>
+      <span class="close-icon">✖</span>
+    </button>
+  </div>
+</header>
+<body>
+</head>
+  <div class="service-container">
+    <h1>Our Services</h1>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/achievement.png" alt=""></div>
+      <div>
+        <h2>Client Acquisition Strategies</h2>
+        <p>Lead generation, targeted campaigns, and market research to help businesses attract ideal clients.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/diagram.png" alt=""></div>
+      <div>
+        <h2>Sales and Marketing Training</h2>
+        <p>Equipping individuals and teams with skills in communication, negotiation, closing sales, and client engagement.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/id-card.png" alt=""></div>
+      <div>
+        <h2>Personal and Business Branding</h2>
+        <p>Building a strong online presence, optimizing profiles (e.g., LinkedIn), and creating compelling marketing materials.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/team.png" alt=""></div>
+      <div>
+        <h2>Client Relationship Management</h2>
+        <p>Strategies and tools for onboarding, managing, and retaining clients, including CRM setup and feedback systems.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/idea-bulb.png" alt=""></div>
+      <div>
+        <h2>Customized Consulting and Workshops</h2>
+        <p>Tailored sessions addressing specific challenges in sales, marketing, or client retention for individuals or teams.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/technical-support.png" alt=""></div>
+      <div>
+        <h2>Digital Tools and Social Media Management</h2>
+        <p>Guidance on CRM software, lead management tools, and content creation for social media to convert prospects into clients.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon-placeholder"><img src="img/bar-graph.png" alt=""></div>
+      <div>
+        <h2>Resources and Templates</h2>
+        <p>Ready-to-use templates, scripts, checklists, and guides for client outreach, onboarding, and retention.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">LinkedIn</a>
+        </div>
+
+        <!-- Footer Text -->
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        <p>Made with care by Your Name or Company.</p>
+    </div>
+</footer>
+<script>document.getElementById("menuToggle").addEventListener("click", function () {
+  const navMenu = document.getElementById("navMenu");
+  const menuIcon = document.querySelector(".menu-icon");
+  const closeIcon = document.querySelector(".close-icon");
+
+  navMenu.classList.toggle("active");
+  menuIcon.classList.toggle("active");
+  closeIcon.classList.toggle("active");
+});</script>
+</body>
+</html>
